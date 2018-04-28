@@ -4,12 +4,12 @@ let locationDB = [    {
     "city": "Denver"
 },
 {
-    "id": 3,
+    "id": 2,
     "state": "Minnesota",
     "city": "Minneapolis"
 },
 {
-    "id": 4,
+    "id": 3,
     "state": "Utah",
     "city": "Salt Lake City"
 }

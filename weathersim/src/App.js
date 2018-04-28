@@ -96,7 +96,7 @@ class App extends Component {
       console.log(forecastState)
       this.setState({forecast: forecastState})
        console.log(this.state)
-      //  this.postCity()
+      //  this.postCity() /*I could not get this post method to work, but am able to get and post in postman
        this.getCity()
     })
   }
@@ -118,10 +118,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
+        
         <p className="App-intro">
           Weather 
         </p>
@@ -129,7 +126,7 @@ class App extends Component {
         <input placeholder="Enter City" ref="city"/>
         <input placeholder="Enter State (ie Colorado)" ref="state"/>
         <button className = "getForecast" onClick={this.selectLocation}> Get Forecast </button>
-        <div className="container"> <br></br>5 Day Forecast
+        <div className="container"> <br></br><h1>5 Day Forecast</h1>
           <div className = "forecastContainer">
             <div className="day0">
               <div>{this.state.forecast[0].weekday} </div>
@@ -146,7 +143,7 @@ class App extends Component {
               <div> <img src={this.state.forecast[0].icon_url}/> </div>
             </div>
             <div className="day2">
-              <div>{this.state.forecast[2].weekdaytitle} </div>
+              <div>{this.state.forecast[2].weekday} </div>
               <div>{this.state.forecast[2].conditions}   </div>
               <div>High {this.state.forecast[2].high} </div>
               <div> Low {this.state.forecast[2].low}</div>
